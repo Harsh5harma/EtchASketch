@@ -61,8 +61,8 @@ options.forEach((option) => {
                 console.log(flag);
             });
             cell.addEventListener('drag', () => {
-                flag = false;
                 cell.style.backgroundColor = "black";
+                flag = false;
             })
         });
 

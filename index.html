@@ -8,18 +8,19 @@
     <title>ETCHaSketch</title>
     <script src="script.js" defer></script>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Sofia">
 </head>
 
-<body>
+<body draggable="false">
     <div class="header">Etch-A Sketch!</div>
-    <div class="container">
+    <div class="container" draggable="false">
         <div class="size_mod">
             <div class="gd">Grid Size:</div>
             <a href="#" onclick="return false;">
                 <div class="options" data-size="x1">16</div>
             </a>
             <a href="#" onclick="return false;">
-                <div class="options" data-size="x2">32</div>
+                <div class="options" data-size="x2" draggable="false" ondragstart="return false;">32</div>
             </a>
             <a href="#" onclick="return false;">
                 <div class="options" data-size="x3">64</div>
@@ -31,7 +32,7 @@
                 <div class="options" data-size="x5">256</div>
             </a>
         </div>
-        <div class="canvas"></div>
+        <div class="canvas" draggable="false"></div>
     </div>
     <div class="footer">&hearts; Made by Harsh Sharma</div>
 </body>
