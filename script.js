@@ -23,6 +23,7 @@ function myOnLoad(){
     makeRows(16,16);
     const cells = document.querySelectorAll('.grid-item');
         let flag = false;
+        let canvas=document.querySelector('.canvas');
         cells.forEach((cell) => {
             cell.addEventListener('mousedown', () => {
                 if (cfFlag1)
@@ -41,6 +42,12 @@ function myOnLoad(){
                         cell.style.backgroundColor = "black";
                 }
             });
+            canvas.addEventListener('mouseleave',()=>{
+                flag=false;
+            })
+            canvas.addEventListener('mouseenter',()=>{
+                flag=false;
+            })
             cell.addEventListener('mouseup', () => {
                 flag = false;
             });
@@ -55,7 +62,7 @@ let rows = 16;
 let cols = 16;
 let cfFlag1 = false;
 const options = document.querySelectorAll(".options");
-window.onload=options.forEach((option) => {
+options.forEach((option) => {
     option.addEventListener('click', () => {
         let canvas = document.querySelector(".canvas");
         let e = canvas.lastElementChild;
@@ -107,6 +114,12 @@ window.onload=options.forEach((option) => {
                         cell.style.backgroundColor = "black";
                 }
             });
+            canvas.addEventListener('mouseleave',()=>{
+                flag=false;
+            })
+            canvas.addEventListener('mouseenter',()=>{
+                flag=false;
+            })
             cell.addEventListener('mouseup', () => {
                 flag = false;
             });
